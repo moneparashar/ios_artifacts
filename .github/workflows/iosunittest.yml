@@ -1,22 +1,29 @@
-name: vivally
+name: Code Coverage
 
 on:
   push:
     branches:
-      - main
-  pull_request:
-    branches:
-      - main
+      - main  # Modify this to match your repository's main branch
 
 jobs:
   build:
-    runs-on: macOS-latest
+    runs-on: macos-latest
+
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Xcode
+        uses: actions/setup-xcode@v2
+        with:
+          xcode-version: 12.x  # Modify to your Xcode version
+
+      - name: Build and run tests
+        run: |
+          xcodebuild test -project vivally.xcodeproj -scheme vivally -destination 'platform=iOS Simulator,name=iPhone 8 Plus,OS=14.5'
+          xcodebuild test -project vivally.xcodeproj -scheme vivally -destination 'platform=iOS Simulator,name=iPhone 8 Plus,OS=14.5' -enableCodeCoverage YES
+
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-      - name: Build and Test
-        run:  xcodebuild test -project vivally.xcodeproj -scheme vivally -destination 'platform=iOS Simulator,name=iPhone 8 Plus,OS=14.5' -enableCodeCoverage YES build test 
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
