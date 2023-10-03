@@ -17,6 +17,6 @@ jobs:
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
       - name: Build and Test
-        run:  xcodebuild test -project vivally.xcworkspace -scheme vivally -destination 'platform=iOS Simulator,name=iPhone 8 Plus,OS=14.5' build test
+        run:  xcodebuild test -project vivally.xcworkspace -scheme vivally -destination 'platform=iOS Simulator,name=iPhone 8 Plus,OS=14.5' build test -enableCodeCoverage
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
