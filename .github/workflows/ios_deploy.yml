@@ -17,4 +17,4 @@ jobs:
       - name: Build and Test
         run:  xcodebuild test -project vivally.xcodeproj -scheme CodecovDemo -destination 'platform=iOS Simulator,name=iPhone 8 Plus,OS=14.5' build test
         env:
-    CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
