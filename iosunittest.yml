@@ -1,0 +1,23 @@
+name: vivally
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: macOS-latest
+    steps:
+      - name: Build and Test
+        run:  xcodebuild test -project vivally.xcodeproj -scheme vivally -destination 'platform=iOS Simulator,name=iPhone 8 Plus,OS=14.5' -enableCodeCoverage YES build test 
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+
