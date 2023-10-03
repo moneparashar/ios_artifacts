@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DayPickerView" customModule="vivally" customModuleProvider="target">
+            <connections>
+                <outlet property="addButton" destination="kbX-A1-80w" id="Wmt-jx-udl"/>
+                <outlet property="cancelButton" destination="tGu-BI-75W" id="9QD-lx-5Hq"/>
+                <outlet property="changeTimeButton" destination="HFp-LG-DMj" id="byR-yy-sj5"/>
+                <outlet property="dayPickerView" destination="wwV-vI-qvZ" id="fai-f5-Cc3"/>
+                <outlet property="editButton" destination="rUV-C3-Dtj" id="1Tc-wi-vQL"/>
+                <outlet property="journalExistsLabel" destination="umr-XL-vhV" id="sTA-wN-pJW"/>
+                <outlet property="pickerContainerView" destination="l5l-mL-8or" id="jud-t3-0X7"/>
+                <outlet property="titleLabel" destination="ZQB-gg-1zC" id="lmN-m5-OOc"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RoundedView" customModule="vivally" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="525" height="422"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHANGE JOURNAL ENTRY TIME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQB-gg-1zC">
+                    <rect key="frame" x="10" y="35" width="505" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="beU-WS-Ffv"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Arq-vC-fTd">
+                    <rect key="frame" x="469.5" y="5" width="50.5" height="34.5"/>
+                    <color key="tintColor" name="avationDkGray"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system" title=" "/>
+                    <connections>
+                        <action selector="closeButtonTapped:" destination="-1" eventType="touchUpInside" id="5O4-iA-sVU"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l5l-mL-8or">
+                    <rect key="frame" x="20" y="80" width="485" height="237.5"/>
+                    <subviews>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wwV-vI-qvZ">
+                            <rect key="frame" x="15" y="10" width="455" height="217.5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="7Is-Wq-B5O"/>
+                            </constraints>
+                        </pickerView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="wwV-vI-qvZ" firstAttribute="centerX" secondItem="l5l-mL-8or" secondAttribute="centerX" id="1eC-Yk-csD"/>
+                        <constraint firstItem="wwV-vI-qvZ" firstAttribute="leading" secondItem="l5l-mL-8or" secondAttribute="leading" priority="999" constant="15" id="2gZ-HO-5n4"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="8KV-wz-nWF"/>
+                        <constraint firstItem="wwV-vI-qvZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="l5l-mL-8or" secondAttribute="leading" id="C2s-eB-eFc"/>
+                        <constraint firstItem="wwV-vI-qvZ" firstAttribute="top" secondItem="l5l-mL-8or" secondAttribute="top" constant="10" id="T08-Ti-Bs5"/>
+                        <constraint firstItem="wwV-vI-qvZ" firstAttribute="centerY" secondItem="l5l-mL-8or" secondAttribute="centerY" id="cit-y6-Z86"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGu-BI-75W" customClass="ActionButton" customModule="vivally" customModuleProvider="target">
+                    <rect key="frame" x="137.5" y="358" width="70" height="34"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="CANCEL"/>
+                    <connections>
+                        <action selector="closeButtonTapped:" destination="-1" eventType="touchUpInside" id="iNq-we-4mV"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUV-C3-Dtj" customClass="ActionButton" customModule="vivally" customModuleProvider="target">
+                    <rect key="frame" x="333" y="358" width="39" height="34"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="EDIT"/>
+                    <connections>
+                        <action selector="editButtonTapped:" destination="-1" eventType="touchUpInside" id="cVO-00-0dQ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbX-A1-80w" customClass="ActionButton" customModule="vivally" customModuleProvider="target">
+                    <rect key="frame" x="334" y="358" width="37" height="34"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="ADD"/>
+                    <connections>
+                        <action selector="addButtonTapped:" destination="-1" eventType="touchUpInside" id="rw6-Kf-Sxl"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFp-LG-DMj" customClass="ActionButton" customModule="vivally" customModuleProvider="target">
+                    <rect key="frame" x="293" y="358" width="119" height="34"/>
+                    <color key="backgroundColor" name="avationLtGray"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="CHANGE TIME"/>
+                    <connections>
+                        <action selector="changeTimeButtonTapped:" destination="-1" eventType="touchUpInside" id="Fsw-RJ-hcN"/>
+                    </connections>
+                </button>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There is already a journal entry at that time" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="umr-XL-vhV">
+                    <rect key="frame" x="100" y="327.5" width="325" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" name="avationError"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" name="avationBackground"/>
+            <constraints>
+                <constraint firstItem="HFp-LG-DMj" firstAttribute="centerY" secondItem="tGu-BI-75W" secondAttribute="centerY" id="80W-9d-v4O"/>
+                <constraint firstItem="tGu-BI-75W" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" priority="999" constant="-90" id="8zk-qS-Qjg"/>
+                <constraint firstItem="HFp-LG-DMj" firstAttribute="centerX" secondItem="rUV-C3-Dtj" secondAttribute="centerX" id="94a-87-Kvx"/>
+                <constraint firstItem="HFp-LG-DMj" firstAttribute="top" secondItem="kbX-A1-80w" secondAttribute="top" id="9hv-Gz-BG6"/>
+                <constraint firstItem="HFp-LG-DMj" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" priority="999" constant="90" id="A98-a4-OBo"/>
+                <constraint firstItem="tGu-BI-75W" firstAttribute="top" secondItem="umr-XL-vhV" secondAttribute="bottom" constant="10" id="DBi-vg-cYg"/>
+                <constraint firstItem="HFp-LG-DMj" firstAttribute="top" secondItem="rUV-C3-Dtj" secondAttribute="top" id="DVV-sh-nbe"/>
+                <constraint firstItem="tGu-BI-75W" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="LoG-xE-rf9"/>
+                <constraint firstAttribute="bottom" secondItem="tGu-BI-75W" secondAttribute="bottom" constant="30" id="SMn-ME-kxW"/>
+                <constraint firstItem="HFp-LG-DMj" firstAttribute="centerX" secondItem="kbX-A1-80w" secondAttribute="centerX" id="W0K-zy-0rv"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="umr-XL-vhV" secondAttribute="trailing" constant="5" id="XSG-17-hz8"/>
+                <constraint firstItem="HFp-LG-DMj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="tGu-BI-75W" secondAttribute="trailing" constant="5" id="ZCf-3O-Zb9"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ZQB-gg-1zC" secondAttribute="trailing" constant="10" id="ZEW-vY-mjB"/>
+                <constraint firstItem="ZQB-gg-1zC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="35" id="bjp-AA-zo4"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="l5l-mL-8or" secondAttribute="trailing" constant="20" id="e7j-fe-gEy"/>
+                <constraint firstItem="rUV-C3-Dtj" firstAttribute="height" secondItem="tGu-BI-75W" secondAttribute="height" id="eB6-V2-lcZ"/>
+                <constraint firstItem="l5l-mL-8or" firstAttribute="top" secondItem="ZQB-gg-1zC" secondAttribute="bottom" constant="20" id="gWC-q0-uqi"/>
+                <constraint firstItem="umr-XL-vhV" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="kCF-C1-Jp0"/>
+                <constraint firstAttribute="trailing" secondItem="Arq-vC-fTd" secondAttribute="trailing" constant="5" id="ksf-IG-tfA"/>
+                <constraint firstItem="l5l-mL-8or" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="kwY-K6-hsk"/>
+                <constraint firstItem="umr-XL-vhV" firstAttribute="top" secondItem="l5l-mL-8or" secondAttribute="bottom" constant="10" id="loE-NZ-Fxj"/>
+                <constraint firstItem="HFp-LG-DMj" firstAttribute="bottom" secondItem="kbX-A1-80w" secondAttribute="bottom" id="lqD-ge-nbp"/>
+                <constraint firstItem="ZQB-gg-1zC" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="mGd-Z4-S9x"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HFp-LG-DMj" secondAttribute="trailing" constant="5" id="wBr-98-m1v"/>
+                <constraint firstItem="Arq-vC-fTd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="wY4-N9-3mf"/>
+                <constraint firstItem="HFp-LG-DMj" firstAttribute="bottom" secondItem="rUV-C3-Dtj" secondAttribute="bottom" id="y2g-D5-Byg"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="136.23188405797103" y="-31.138392857142854"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <namedColor name="avationBackground">
+            <color red="0.94999998807907104" green="0.94999998807907104" blue="0.94999998807907104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="avationDkGray">
+            <color red="0.34901960784313724" green="0.34901960784313724" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="avationError">
+            <color red="0.69019607843137254" green="0.0" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="avationLtGray">
+            <color red="0.80784313725490198" green="0.80784313725490198" blue="0.80784313725490198" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
