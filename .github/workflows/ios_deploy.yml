@@ -1,4 +1,4 @@
-name: vivally Demo
+name: vivally
 
 on:
   push:
