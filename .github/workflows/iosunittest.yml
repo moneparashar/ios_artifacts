@@ -19,6 +19,5 @@ jobs:
           xcodebuild test -project vivally.xcodeproj -scheme vivally -destination 'platform=iOS Simulator,name=iPhone 12,OS=16.2' -enableCodeCoverage YES
 
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v3
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
+        run: |
+          ./codecov-bash.sh -t ${{ secrets.CODECOV_TOKEN }}
