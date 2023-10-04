@@ -16,12 +16,11 @@ jobs:
       - name: Build and run tests
         run: |
           xcodebuild test -workspace vivally.xcworkspace -scheme vivally -destination 'platform=iOS Simulator,OS=16.2,name=iPhone 14 Plus' -enableCodeCoverage YES build test
-          xcodebuild test -project vivally.xcodeproj -scheme vivally -destination 'platform=iOS Simulator,OS=16.2,name=iPhone 14 Plus' -enableCodeCoverage YES
           
       - name: Generate Code Coverage Report with Slather
         run: |
           gem install slather
-          slather coverage --html --scheme vivally --workspace /Users/zmo-mac-vivekw-01/Downloads/ios-ios-vivek-2733/ios/vivally/vivally.xcworkspace  /Users/zmo-mac-vivekw-01/Downloads/ios-ios-vivek-2733/ios/vivally/vivally.xcodeproj 
+          slather coverage --html --scheme vivally --workspace /Users/zmo-mac-vivekw-01/Downloads/ios-ios-vivek-2733/ios/vivally/vivally.xcworkspace 
        
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
