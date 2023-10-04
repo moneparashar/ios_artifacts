@@ -20,7 +20,7 @@ jobs:
       - name: Generate Code Coverage Report with Slather
         run: |
           gem install slather
-          slather coverage --cobertura-xml --scheme vivally --workspace ./vivally.xcworkspace ./vivally.xcodeproj --show
+          slather coverage --cobertura-xml --scheme vivally --workspace ./vivally.xcworkspace ./vivally.xcodeproj
        
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
