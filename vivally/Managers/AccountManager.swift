@@ -6,9 +6,7 @@
  */
 
 import UIKit
-#if !TESTING
 import JWTDecode
-#endif
 
 class AccountManager: NSObject {
 
