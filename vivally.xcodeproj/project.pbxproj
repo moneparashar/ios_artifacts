@@ -86,6 +86,7 @@
 		2EFC25E6283E5750004B79A1 /* deviceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFC25E5283E5750004B79A1 /* deviceTests.swift */; };
 		2EFC25E8283E7055004B79A1 /* deviceErrorManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFC25E7283E7055004B79A1 /* deviceErrorManagerTests.swift */; };
 		50DFD2793A8F96F4DA317342 /* Pods_vivallyStaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A919233410EF9ED9C3BAF221 /* Pods_vivallyStaging.framework */; };
+		55C0CABF2ACD2D8100348573 /* JWTDecode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55C0CABE2ACD2D8100348573 /* JWTDecode.framework */; };
 		7100AEE22648838F00F38EBF /* FSCalendarScopeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7100AEE12648838F00F38EBF /* FSCalendarScopeExtension.swift */; };
 		7100AEE5264893AE00F38EBF /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7100AEE4264893AE00F38EBF /* EventTableViewCell.swift */; };
 		7100AEEB26495F4E00F38EBF /* PatientSideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7100AEEA26495F4E00F38EBF /* PatientSideMenuViewController.swift */; };
@@ -920,6 +921,7 @@
 		2EFC25E3283E5182004B79A1 /* batteryStateOfChargeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = batteryStateOfChargeTests.swift; sourceTree = "<group>"; };
 		2EFC25E5283E5750004B79A1 /* deviceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deviceTests.swift; sourceTree = "<group>"; };
 		2EFC25E7283E7055004B79A1 /* deviceErrorManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deviceErrorManagerTests.swift; sourceTree = "<group>"; };
+		55C0CABE2ACD2D8100348573 /* JWTDecode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JWTDecode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5941E978C4AF10485981F788 /* Pods-vivallyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vivallyTests.debug.xcconfig"; path = "Target Support Files/Pods-vivallyTests/Pods-vivallyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7100AEE12648838F00F38EBF /* FSCalendarScopeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSCalendarScopeExtension.swift; sourceTree = "<group>"; };
 		7100AEE4264893AE00F38EBF /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
@@ -1280,6 +1282,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55C0CABF2ACD2D8100348573 /* JWTDecode.framework in Frameworks */,
 				F1B3A51604E85A0AD156B424 /* Pods_vivallyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1404,6 +1407,7 @@
 		61A91087EF99D380B84EAD8D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				55C0CABE2ACD2D8100348573 /* JWTDecode.framework */,
 				267022952A4DEBF00075C8A4 /* Security.framework */,
 				EDA5FB5C29CF3DDD72B98E0F /* Pods_vivally.framework */,
 				A919233410EF9ED9C3BAF221 /* Pods_vivallyStaging.framework */,
