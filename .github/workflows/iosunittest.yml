@@ -15,6 +15,7 @@ jobs:
 
       - name: Build and run tests
         run: |
+          export TESTING=1
           xcodebuild test -project vivally.xcodeproj -scheme vivally -destination 'platform=iOS Simulator,name=iPhone 12,OS=16.2'
           xcodebuild test -project vivally.xcodeproj -scheme vivally -destination 'platform=iOS Simulator,name=iPhone 12,OS=16.2' -enableCodeCoverage YES
 
