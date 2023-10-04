@@ -15,8 +15,7 @@ jobs:
 
       - name: Build and run tests
         run: |
-          xcodebuild test -project vivally.xcodeproj -scheme vivally -destination 'platform=iOS Simulator,name=iPhone 12,OS=16.2'
-          xcodebuild test -project vivally.xcodeproj -scheme vivally -destination 'platform=iOS Simulator,name=iPhone 12,OS=16.2' -enableCodeCoverage YES
+          xcodebuild test -workspace vivally.xcworkspace -scheme vivally -destination 'platform=iOS,name=IPhone' -enableCodeCoverage YES
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
