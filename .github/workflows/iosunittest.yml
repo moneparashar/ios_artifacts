@@ -15,7 +15,7 @@ jobs:
 
       - name: Build and run tests
         run: |
-          xcodebuild test -workspace vivally.xcworkspace -scheme vivally -destination 'platform=iOS Simulator,OS=16.2,name=iPhone 14 Plus' -enableCodeCoverage YES build test
+          xcodebuild test -workspace vivally.xcworkspace -scheme vivally -destination 'platform=iOS Simulator,OS=16.2,name=iPhone 14' -enableCodeCoverage YES build test
           
       - name: Generate Code Coverage Report with Slather
         run: |
